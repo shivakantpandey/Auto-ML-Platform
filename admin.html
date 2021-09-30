@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Admin Portal {% endblock %}
+{% block mainbody %}
+{% if session['type']=='admin' %}
+<!-- user activation/deactivation -->
+<div id="users_table">
+    <input type="submit" class="activate" value="Render Users Data" onClick="getUsers()">
+    <center>
+        <div id="users_data">
+        </div>
+    </center>
+</div>
+<br><br>
+{% else %}
+<!-- flag unauthorized access -->
+<script>window.location.href="{{ url_for('HomePage') }}"; </script>
+{% endif %}
+{% endblock %}

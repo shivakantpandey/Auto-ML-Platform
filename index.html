@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Home Page {% endblock %}
+{% block mainbody %}
+<div class="about">
+    <center><h1>Details</h1><center><br><br>
+        <p class="desc">
+            I am Suraj Kumar Pandey, student of final year of computer science and engineering in SIET college. In this project I have tried to develop an indigenous <b>Auto-ML</b> platform which can function as full fledged application for helping non-coders to analyse datasets and obtain insights about the same without writing a single peice of code. 
+            The architecture of this application is similar to a basic full stack web platform. The backend is coded on Flask (a micro web framework of python) and frontend is on HTML5, CSS3 and vanilla javascript. The Machine learning task such as preprocessing and model initialisation, training and prediction is hadeled by Scikit learn library of python. For the visualisation, Matplotlib library of python is used. 
+        </p>
+        <p class="desc">
+            The platform automatically converts the passwords into SHA-256 hashes before storing them into the mysql database inturn enhancing the security of the user's credentials. The dataset uploaded for analysis will be stored in such a way that server does not permits access to them from web console and only insights and analysis reports trelated to it will be accessible to users. 
+        </p>
+        <p class="desc">
+            There are some loop holes that are intentionally left out untackled as I want to practice some cyber security exploits on this system and want to know the intricasies of these left exploits. For example, report.html is prone to Cross Site Request Forgery and can lead to severe remote code execution attacks. There are very few measures taken for SQL injection attacks which is not that easy to exploit for novice attackers but is peice of cake for experienced attackers.
+        </p>
+        
+
+</div>
+{% endblock %}
